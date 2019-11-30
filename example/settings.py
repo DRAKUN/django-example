@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # my apps
     'poll.apps.PollConfig',
+    'employee.apps.EmployeeConfig',
 ]
 
 MIDDLEWARE = [

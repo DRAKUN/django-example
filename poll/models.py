@@ -9,8 +9,23 @@ class Question(models.Model):
     created_by = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
 
     #time data
+    start_date = models.DateField(null=True, blank=True)
+    end_date = models.DateField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.title
+
+
+
+class Choice(models.Model):
+    question = models.ForeignKey('poll.Question', on_delete=models.CASCADE)
+    text = models.TextField(null=True, blank=True)
+
+    #time data
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.text
