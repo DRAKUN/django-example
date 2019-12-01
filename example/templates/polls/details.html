@@ -1,15 +1,21 @@
 {% extends 'base.html' %}
 
-{% load  static %}
 
 {% block content %}
-    <h2>Details page</h2>
-    <h3>{{ question.title}} </h2>
+    <p>
+        <h3>{{question.title}}</h3>
+    </p>
+    <div class="list-group col-md-6">
     {% for choice in question.choices %}
-        <p> {{ choice.text }} ({{ choice.votes}}) </p>
-    {% empty %}
-        <p>There is no choice</p>
-    {% endfor %}
-    <hr>
-    <p> Poll is created by {{ question.created_by.first_name }}</p>
+        <a class="list-group-item" href="{% url 'poll_vote' question.id %}">
+            <span class="badge badge-pill badge-primary float-right">{{choice.votes}}</span>
+            {{choice.text}}
+        </a>
+        <!-- <p> ({{choice.votes}})</p> -->
+        {% empty %}
+        <div class="list-group-item">There is no chice available for this question.</div>
+        {% endfor %}
+    </div>
+    <br>
+    <div class="col-md-12"><b>Created by: </b> {{question.created_by.first_name}}</div>
 {% endblock content %}
