@@ -21,3 +21,26 @@ def details(request, id=None):
         
     context['question'] = question
     return render(request, 'polls/details.html', context)
+
+def poll(request, id=None):
+    if (request.method == "GET"):
+        try:
+            question = Question.objects.get(id=id)
+        except:
+            raise Http404
+        context = {}
+        context['question'] = question
+        return render(request, 'polls/poll.html', context)
+    if (request.method == "POST"):
+        data = request.POST
+        print(f'MY DATA ===> {data}')
+        user_id = 1
+        # achoice = Choice.objects.get(data.choice)
+        # print(f'A CHOICE ===> {achoice}')        
+        # si tu souhaite instancier lobjet directement sans etre obligeé de faire 
+        # une requete model.objects.get(id=x), utilise _id
+        ret = Answer.objects.create(user_id=user_id, choice_id=data['choice'])
+        if ret:
+            return HttpResponse("Your vote is successuf")
+        else:
+            return HttpResponse("Your vote have been broken")
