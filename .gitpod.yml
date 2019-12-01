@@ -13,3 +13,18 @@ tasks:
 github:
     prebuilds:
         pullRequestsFromForks: true
+vscode:
+  extensions:
+    - aliariff.auto-add-brackets@0.10.0:HvtM0zTSXYOP9jTmkc9rxg==
+    - bigonesystems.django@1.0.2:P/DthMuq/Semg3tL1M4yaw==
+    - SauravManoj.django-template-snippets@0.1.36:nHAr0YQdWO4k22BowViIXA==
+    - bibhasdn.django-html@1.3.0:CsoBfh6AxIU/B35Ht3UG0w==
+    - bibhasdn.django-snippets@1.1.1:wx3yPyLjTwPZA2Oy+2ruaA==
+    - sashaweiss.bracket-jumper@1.1.8:8BDfs4mh1Bg1p2/6norpHg==
+    - thebarkman.vscode-djaneiro@1.4.2:nv7nNmn5dxATMbtQMvLRHg==
+    - CoenraadS.bracket-pair-colorizer-2@0.0.29:Y00hDi6uxq/5AWl637owFQ==
+    - CoenraadS.bracket-pair-colorizer@1.0.61:fqPT1sJEqaEdrfXeYbdW+A==
+    - rafamel.subtle-brackets@3.0.0:4TSVtwQGhDaPXi7yPcKLuw==
+    - pustelto.bracketeer@1.2.7:0Qv/+7tHXeM1Q4ZKKfIFKw==
+    - batisteo.vscode-django@0.19.0:GOHmg6fGCbzkKe2S73i7Ig==
+    - shamanu4.django-intellisense@0.0.2:cTpS8yuMbtSaNXYHLlQAaQ==
